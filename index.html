@@ -11,7 +11,7 @@
 		<input type="radio" name="types" value="false" ng-model="edible"> Non-Poisonous
 
 		<ul>
-			<li ng-repeat="mushroom in mushroomsList | filter : searchText | filter : edible">
+			<li ng-repeat="mushroom in mushroomsList | filter : {description:searchText} | filter : edible">
 				<h1>{{mushroom.name}}</h1>
 				<p ng-model="mushroom.edible">
 					<span ng-show="mushroom.edible">Edible</span>
